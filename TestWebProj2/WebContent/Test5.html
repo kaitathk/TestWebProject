@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Test5</title>
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery-ui-1.9.0.custom.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/jquery-ui.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/jquery-ui-1.9.0.custom.min.css" />
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery.colorbox.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/s5box-ie.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/s5box.css" />
+
+<style type="text/css">
+.s5box_Login{
+	width:100px;
+	height:24px;
+	cursor:pointer;
+	border:solid 1px lightgray;
+	text-align:center;
+}
+
+#LogScr{
+/*	border:solid 1px lightgray; */
+}
+
+.fldnme{
+	display:inline-block;
+	min-width:8em;
+	font-family:Arial;
+	font-size:12px;
+}
+
+#cboxLoadedContent{margin-top:20px;}
+#cboxTitle{position:absolute; Top:0px; left:0; text-align:center; width:100%; color:#999; height:12px;}
+
+
+</style>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+$(function(){
+	
+	$.fn.colorbox.settings.initialWidth=200;
+	$.fn.colorbox.settings.initialHeight=200;
+	$.fn.colorbox.settings.transition="elastic";	
+	$.fn.colorbox.settings.opacity=0.5;	
+	$.fn.colorbox.settings.overlayClose=false;	
+	
+//	$(".s5box_Login").colorbox({width:"300px", height:"250px", inline:true, href:"form#LogScr", title:"Please Login",
+//									onComplete:function(){$("form input:first").focus();}});
+	$(".s5box_Login").colorbox({width:"300px", height:"250px", href:"Test6.html", title:"Please Login", iframe:true, fastIframe:false,
+		onComplete:function(){
+				$("iframe").contents().find("input:first").focus();
+				}
+									});
+	
+});
+
+</script>
+
+
+<div id="s5Login" class="s5box_Login">Login</div>
+<br />
+<br />
+<div Style="visibility: hidden;">
+<form id="LogScr">
+<div>
+<span class="fldnme">User ID : </span>
+<input type="text" name="uid" style="width:100px;">
+</div><br />
+<div>
+<span class="fldnme">Password : </span>
+<input type="password" name="pwd" style="width:100px;">
+</div><br />
+</form>
+</div>
+</body>
+</html>

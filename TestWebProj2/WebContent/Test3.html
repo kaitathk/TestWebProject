@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Test3</title>
+
+<!-- 
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-1.8.2.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-ui-1.9.0.custom.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/jquery-ui.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/jquery-ui-1.9.0.custom.min.css" />
+-->
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+<style type="text/css">
+
+ul {
+	margin:0;
+	padding:0;
+	width:150px;
+}
+ul li{
+	display:block; 
+/*	line-height:normal; */
+	min-height:36px;
+	border:solid 1px lightgray;
+}
+ul li div{
+/*	display:block; */
+	min-height:36px;
+	vertical-align:50%;
+}
+ul ul{
+	width:150px;
+	margin-left:5px;
+}
+ul li li{
+	display:block;
+/*	line-height:normal; */
+	min-height:28px;
+	border:solid 1px lightgray;
+	vertical-align:middle;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+
+$(function(){
+	
+	var bgc=$("ul li").css("background-color");
+	$("ul ul").hide();
+	
+	$("ul li").hover(function(){
+		$(this).css("cursor","pointer");
+		$(this).css("background-color","lightblue");
+		},
+		function(){
+		$(this).css("cursor","default");
+		$(this).css("background-color",bgc);
+		}
+	)
+	
+	$("ul li").click(function(){
+		$("#result").text($(this).children("ul").text());
+/*		$("ul ul").hide("slow");
+		if ($(this).has("ul"))
+			{
+				$(this).children("ul").show("slow");
+			}
+*/
+		if ($(this).children("ul").is(":hidden")) {
+			$("ul ul:visible").delay(500).slideUp(500,"linear");
+			$(this).children("ul").slideDown(500,"linear");
+		}
+	
+	})
+})
+
+</script>
+
+<ul>
+	<li><div>Line 1</div>
+		<ul>
+			<li>Line 11</li>
+			<li>Line 12</li>
+		</ul>
+	</li>
+	<li><div>Line 2</div>
+		<ul>
+			<li>Line 21</li>
+			<li>Line 22</li>
+			<li>Line 23</li>
+		</ul>
+	</li>
+	<li><div>Line 3</div></li>
+	<li><div>Line 4</div></li>
+</ul>
+<br />
+<div><span>result : </span><span id="result"></span></div>
+</body>
+</html>

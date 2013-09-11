@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Test1</title>
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-1.8.2.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-ui-1.9.0.custom.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/jquery-ui.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/jquery-ui-1.9.0.custom.min.css" /> 
+
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/main.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/nav.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/template.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/vmsite-ltr.css" />
+
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/Test1.css" />
+
+</head>
+<body>
+
+<script type="text/javascript">
+$(function(){
+	
+	$("#VMmenu397_1145 li.VMClose ul").hide();
+	
+	$("#VMmenu397_1145 li .VmArrowdown").click(
+	function(){
+		if ($(this).parent().next("ul").is(":hidden")) {
+			$("#VMmenu397_1145 ul:visible").delay(500).slideUp(500,"linear").parents("li").addClass("VmClose").removeClass("VmOpen");
+			$(this).parent().next("ul").slideDown(500,"linear");
+			$(this).parents("li").addClass("VmOpen").removeClass("VmClose");
+		}
+	});
+});
+</script>
+
+<div id="wrapper">
+  <div id="main">
+  <div id="left" style="width:200px;">
+  <div class="moduletable grey border catmenu">
+  <div class="content-module">  
+  <ul class="VMmenu catcls" id="VMmenu397_1145">
+    <li class="VMClose">
+      <div>
+      <a href="/hk/特別工具">特別工具</a>
+      <span class="VmArrowdown"> </span>
+      </div>
+      	<ul class="menu">
+		<li>
+    		<div ><a href="/hk/產品介紹/特別工具/陸上行動" >陸上行動</a></div>
+		</li>
+		<li>
+    		<div ><a href="/hk/產品介紹/特別工具/水上行動" >水上行動</a></div>
+		</li>
+		</ul>
+    </li>
+    <li class="VMClose">
+      <div>
+      <a href="/hk/生化裝備">生化裝備</a>
+      <span class="VmArrowdown"> </span>
+      </div>
+		<ul class="menu">
+		<li>
+    		<div ><a href="/hk/產品介紹/生化裝備/生化防毒面罩" >生化防毒面罩</a></div>
+		</li>
+		<li>
+    		<div ><a href="/hk/產品介紹/生化裝備/生化防毒保護衣" >生化防毒保護衣</a></div>
+		</li>
+		</ul>      
+    </li>
+    <li class="VMClose">
+      <div>
+      <a href="/hk/醫療器材">醫療器材</a>
+      <span class="VmArrowdown"> </span>
+      </div>
+		<ul class="menu">
+		<li>
+    		<div ><a href="/hk/產品介紹/醫療器材/醫療急救配件" >醫療急救配件</a></div>
+		</li>
+		<li>
+    		<div ><a href="/hk/產品介紹/醫療器材/醫療儲存用品" >醫療儲存用品</a></div>
+		</li>
+		</ul>      
+    </li>
+    <li class="VMClose">
+      <div>
+      <a href="/hk/拯救行動">拯救行動</a>
+      <span class="VmArrowdown"> </span>
+      </div>
+		<ul class="menu">
+		<li>
+    		<div ><a href="/hk/產品介紹/拯救行動/攀山拯救安全帶" >攀山拯救安全帶</a></div>
+		</li>
+		<li>
+    		<div ><a href="/hk/產品介紹/拯救行動/攀山拯救頭盔" >攀山拯救頭盔</a></div>
+		</li>
+		</ul>        
+    </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>  
+</body>
+</html>

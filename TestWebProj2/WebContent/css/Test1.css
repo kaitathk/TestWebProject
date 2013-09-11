@@ -1,0 +1,82 @@
+@CHARSET "utf-8";
+
+.catmenu ul, .catmenu ul li, .catmenu ul ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.catmenu li {
+min-height:36px;
+display:block;
+vertical-align: middle;
+border:none;
+margin:0 0 7px 0;
+zoom: 1;
+}
+
+.catmenu li div{
+	height:36px;
+	font-size:100%;
+	vertical-align:middle;
+}
+
+.catmenu li a, .catmenu li span.separator {
+display : block;
+position : relative;
+/**  change  **/
+color:#444;
+padding: 6px 10px 6px 3%;
+text-transform: uppercase;
+letter-spacing: -0.5px;
+font-weight: normal;
+font-size:100%;
+text-decoration: none;
+-webkit-transition : all 0.3s ease-in;
+-moz-transition : all 0.3s ease-in;
+-ms-transition : all 0.3s ease-in;
+-o-transition : all 0.3s ease-in;
+transition : all 0.3s ease-in;
+z-index:10;
+}
+
+.catmenu ul ul {
+margin: 0 0 0 4px;
+}
+
+.catmenu li li {
+margin: 0;
+min-height:24px;
+}
+
+.catmenu li li a, .catmenu li li span.separator,
+.catmenu li.active li a, .catmenu li.active li span.separator {
+font-size:100%;
+text-transform: none;
+color:#777;
+background: transparent url(../images/puce-link.png) 5px 11px no-repeat;
+padding-left:16px;
+margin-left: 0;
+}
+
+/** if parent active and children active  **/
+.catmenu li.active li a:hover, .catmenu li.active li.active li a:hover, .catmenu li.active li.active li.active li a:hover,
+.catmenu li.active li span.separator:hover, .catmenu li.active li.active li span.separator:hover, .catmenu li.active li.active li.active li span.separator:hover {
+color: #3c87de;
+}
+
+/** if active level 1 **/
+.catmenu li.active a, .catmenu li.active span.separator,
+.catmenu li.active a:hover, .catmenu li.active span.separator:hover {
+color: #3c87de;
+}
+
+/** if hover level 1 **/
+.catmenu li a:hover, .catmenu li span.separator:hover, .catmenu li li a:hover, .catmenu li li li a:hover,
+.catmenu li li span.separator:hover, .catmenu li li li span.separator:hover {
+color: #3c87de;
+}
+
+.catcls li a{
+	display:inline;
+}

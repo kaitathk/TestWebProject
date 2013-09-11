@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=BIG5">
+<title>Test6</title>
+
+<style type="text/css">
+.fldnme{
+	display:inline-block;
+	min-width:6em;
+	font-family:Arial;
+	font-size:12px;
+}
+</style>
+</head>
+<body>
+<form id="LogScr" onsubmit="returnform()">
+<div>
+<span class="fldnme">User ID : </span>
+<input type="text" name="uid" style="width:100px;" id="uid">
+</div><br />
+<div>
+<span class="fldnme">Password : </span>
+<input type="password" name="pwd" style="width:100px;">
+</div><br />
+<div>
+<input type="submit" value="Submit">
+</div>
+</form>
+
+<script type="text/javascript">
+function returnform(){
+	self.close();
+	parent.parent.$.fn.colorbox.close();
+	return true;
+}
+</script>
+</body>
+</html>

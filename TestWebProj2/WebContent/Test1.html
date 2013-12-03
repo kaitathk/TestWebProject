@@ -31,6 +31,11 @@ $(function(){
 			$(this).parent().next("ul").slideDown(500,"linear");
 			$(this).parents("li").addClass("VmOpen").removeClass("VmClose");
 		}
+		else
+		{	
+			$("#VMmenu397_1145 ul:visible").slideUp(500,"linear").parents("li").addClass("VmClose").removeClass("VmOpen");
+//			$(this).parent().next("ul").slideup(500,"linear").parents("li").addClass("VmClose").removeClass("VmOpen");
+		}
 	});
 });
 </script>

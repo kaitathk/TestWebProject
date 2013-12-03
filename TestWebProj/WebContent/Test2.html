@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=BIG5">
+<title>Test2</title>
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-1.8.2.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-ui-1.9.0.custom.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery.marquee.js"></script>
+
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/jquery-ui.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="./css/jquery-ui-1.9.0.custom.min.css" />
+
+<style type="text/css">
+	body, html{margin:0;padding:0;}
+	#display{
+			width:500px;
+			margin-left:auto;
+			margin-right:auto;
+			height:100%;
+			}
+	#templine{
+			margin:0px;
+			padding:0px;
+			font-size:28px;
+			padding-top:3px;
+			padding-bottom:3px;
+			overflow:hidden;
+			background-color:lightblue;
+			position:relative;
+			}
+	#regline{
+			margin:0px;
+			padding:0px;
+			font-size:28px;
+			padding-top:3px;
+			padding-bottom:3px;
+			overflow:hidden;
+			background-color:lightblue;
+			position:relative;
+			}
+	.content{
+			margin:0px;
+			padding:0px;
+			color:blue;
+			}
+</style> 
+</head>
+<body>
+
+<script type="text/javascript">
+$(function(){
+
+	var wh=$(window).height()-
+			$("#templine").height()-
+			$("#regline").height()-12;
+	$("#wrapper").height(wh);
+
+	var context='<span class="content"></span>';
+	
+	$("#templine").wrapInner(context);
+	var moveobj=$("#templine").find(".content");
+
+	$(".content").append("abcdefg");
+
+//	$(".content").css('margin-left',$("#templine").css("width"));
+
+//	var container=$("#templine").width()+$(".content:first").width();
+	
+//	$("#templine").text($(".content:first").css("width"))
+
+	var marquee=function(){
+		moveobj.css('margin-left',$("#templine").css("width"));
+		var movwidth=$("#templine").width()+$(".content:first").width();
+		var movecss={'margin-left' : '-'+movwidth+'px'}
+		moveobj.animate(movecss, 8000,'linear',function(){
+			$(".content").append("&nbsp;&nbsp;abcdefg");
+			marquee();});
+		}
+
+	marquee();
+	
+});
+
+</script>
+
+<div id="display">
+<div id="wrapper">&nbsp;</div>
+<div id="templine">&nbsp;</div>
+<div id="regline">&nbsp;</div>
+</div>
+</body>
+</html>

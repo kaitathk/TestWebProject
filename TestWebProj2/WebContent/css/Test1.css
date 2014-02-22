@@ -38,6 +38,8 @@ text-decoration: none;
 -o-transition : all 0.3s ease-in;
 transition : all 0.3s ease-in;
 z-index:10;
+font-family:Oswald,"Microsoft Jhenghei","微軟正黑體",SimHei;
+font-size:14px;
 }
 
 .catmenu ul ul {
@@ -79,4 +81,9 @@ color: #3c87de;
 
 .catcls li a{
 	display:inline;
+}
+
+.moduletable {
+	border-radius:6px;
+	behavior:url(css/PIE.htc);
 }

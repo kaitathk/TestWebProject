@@ -1,10 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=BIG5">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Test7</title>
 
 <style type="text/css">
+* {
+	margin:0;
+	padding:0;
+}
+a img, img{
+	border: medium none;
+}
+a {
+	text-decoration:none;
+}
+img{
+	height:auto;
+  	max-width:100%;
+	max-width:none\9;
+}
 
 .s5_regfloatleft{float:left;width:80% !important;}
 .rlable{float:left;line-height:31px;}
@@ -21,17 +36,40 @@
 .s5_regrequiredfields {padding-top:16px; padding-bottom:16px;}
 #s5box_register_inner .calendar .button {float:none;}
 
+#josForm{
+	margin:10px 10px 10px 10px;
+}
+.icons{
+	float: right;
+	margin: 4px 0 10px 30px;
+	text-align:right;
+}
+
+.clear{
+	clear:both;
+}
 </style>
 
 </head>
 <body>
+
+<div class="icons">
+<a title="PDF" href="#">
+<img src="images/pdf_button.png" />
+</a>
+<a title="Print" href="#">
+<img src="images/printButton.png" />
+</a>
+<div class="clear"></div>
+</div>
+
 <form name="josForm" id="josForm">
 
 	<div class="s5_regfloatleft s5_reglabel">
 		<label for="jform_name" id="jform_name-lbl">Name *</label>
     </div>		
 	<div class="s5_regfloatleft s5_reginput">
-		<input type="text" maxlength="50" class="inputbox required" value="" size="30" id="jform_name" name="jform[name]"/>
+		<input type="text" maxlength="50" class="inputbox required" value="" size="10" id="jform_name" name="jform[name]"/>
 	</div>
 
 	<div style="clear:both;"></div>
@@ -41,7 +79,7 @@
 	</div>
 
 	<div class="s5_regfloatleft s5_reginput">
-		<input type="text" maxlength="25" class="inputbox required validate-username" value="" size="30" name="jform[username]" id="jform_username"/>
+		<input type="text" maxlength="25" class="inputbox required validate-username" value="" size="10" name="jform[username]" id="jform_username"/>
 	</div>
 
 	<div style="clear:both;"></div>

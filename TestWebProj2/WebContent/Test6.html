@@ -15,6 +15,20 @@
 	font-family:Arial;
 	font-size:12px;
 }
+
+input {
+	border:solid 1px #b0b0b0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;	
+	behavior: url(./css/PIE.htc);
+}	
+
+.button {
+	height:28px;
+}	
+
 </style>
 </head>
 <body>
@@ -28,7 +42,7 @@
 <input type="password" name="pwd" style="width:100px;">
 </div><br />
 <div>
-<input type="submit" value="Submit">
+<input class="button" type="submit" value="Submit">
 </div>
 <div id="unm" class="divhidden"></div>
 </form>
@@ -36,7 +50,8 @@
 
 <script type="text/javascript">
 function returnform(){
-	window.parent.$("#LoginName").text("User1");
+	var usr=$("#uid").text();
+	window.parent.$("#LoginName").text(usr);
 	self.close();
 	parent.parent.$.fn.colorbox.close();
 	return true;

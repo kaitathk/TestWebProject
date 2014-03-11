@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Ask a Question</title>
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery-ui-1.9.0.custom.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/jquery-ui.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/jquery-ui-1.9.0.custom.min.css" />
+
+
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/vmsite-ltr.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/template.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/validationEngine.jquery.css" />
+
+<style type="text/css">
+.inputbox, .registration input, .login input, .contact-form input, #jform_contact_message, input,
+.product-details, .ask-a-question, .nivoSlider, textarea
+{
+	position:relative;
+	z-index:0;
+	behavior: url(css/PIE.htc);
+}
+</style>
+
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/validate.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery.validationEngine.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$("#asform").validataionEngine("attach");
+});
+
+</script>
+
+</head>
+<body>
+<div class="ask-a-question-view">
+	<h1>Ask a Question</h1>
+	<div class="product-summary"></div>
+	<div class="form-field">
+		<form class="form-validate" name="askform" id="askform">
+		
+		<label>Name : 
+			<input type="text" id="name" size=30
+				class="validate[required,minSize[4],maxSize[64]]" 
+				validation="required name" name="name" value=""/>
+		</label>
+		<br />
+		<label>E-Mail : 
+			<input type="text" id="email" size=30 validation="required email"/>
+		</label>
+		<br />
+		<label>Pls Comment
+		<br />
+		<textarea title="Pls Comment" id="comment" class="field" name="comment" rows="10" >
+		</textarea>
+		</label>
+		<div class="submit">
+			<input class="highlight-button" type="submit"
+				 title="Send Question" name="submit_ask">
+		</div>		 
+		</form>
+	</div>
+</div>
+</body>
+</html>

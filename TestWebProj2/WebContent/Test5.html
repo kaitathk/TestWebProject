@@ -13,17 +13,22 @@
 <link rel="stylesheet" style="text/css" charset="utf-8" href="css/s5box-ie.css" />
 <link rel="stylesheet" style="text/css" charset="utf-8" href="css/s5box.css" />
 
+<script type="text/javascript" language="javascript" charset="utf-8" src="css/facebox.js"></script>
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/facebox.css" />
+
 <style type="text/css">
-.s5box_Login{
+
+
+.s5box_Login, .askquestion{
 	background-color:white;
 	width:100px;
 	height:24px;
 	cursor:pointer;
 	border:solid 1px #b0b0b0;
 	text-align:center;
-	-moz-box-shadow: 0px 0px 4px rgba(0,0,0, 0.3);
-	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0, 0.3);
-	box-shadow: 0px 0px 4px rgba(0,0,0, 0.3);
+	-moz-box-shadow: inset 0px 0px 4px rgba(0,0,0, 0.3);
+	-webkit-box-shadow: inset 0px 0px 4px rgba(0,0,0, 0.3);
+	box-shadow: inset 0px 0px 4px rgba(0,0,0, 0.3);
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-khtml-border-radius: 6px;
@@ -31,7 +36,7 @@
 	behavior: url(./css/PIE.htc);
 }
 
-#LogScr{
+#LogScr{	
 /*	border:solid 1px lightgray; */
 }
 
@@ -41,10 +46,90 @@
 	font-family:Arial;
 	font-size:12px;
 }
+.inputfld{
+  border:1px solid #D8D8D8;
+  padding:4px;
+  background:#F7F7F7;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07) inset; /* FF3.5+ */
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07) inset; /* Saf3.0+, Chrome */
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07) inset; /* Opera 10.5, IE9, Chrome 10+ */}
+}
 
 #cboxLoadedContent{margin-top:20px;}
 #cboxTitle{position:absolute; Top:0px; left:0; text-align:center; width:100%; color:#999; height:12px;}
 
+
+.module_out_box{
+	margin-bottom:14px;
+	margin-left:7px;
+	margin-right:7px;
+}
+.module_round_box{
+	border:1px solid #C5C5C5;
+	-moz-box-shadow: 0px 0px 8px #BDBDBD;
+	-webkit-box-shadow: 0px 0px 8px #BDBDBD;
+	box-shadow:0px 0px 8px #BDBDBD;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius:6px;
+	padding:20px 20px 16px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	position:relative;
+	z-index:0;
+	behavior: url(./css/PIE.htc);
+}
+fieldset  {
+	border-bottom:1px solid #EDEDED;
+	padding:0px;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+#LogScr fieldset{
+	border:medium none;
+}
+input {
+	border:solid 1px #b0b0b0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;	
+	position:relative;
+	z-index:0;
+	behavior: url(./css/PIE.htc);
+}	
+.button {
+	width:auto;
+ 	height:28px;
+	border:medium none;
+	font-weight:bold;
+	background:none repeat scroll 0 0 #73A0CF;
+}
+.button:hover{
+ 	background:#666666;
+ 	cursor:pointer;
+}
+input:hover{
+	border:solid 1px #BDBCBC;
+/* 	box-shadow: 0px 0px 2px rgba(0,0,0, 0.3); */
+}	
+ul{
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+	font-family:Arial;
+	font-size:12px;
+}
+a{
+	text-decoration:none;
+}
+
+.inputfld{
+	width:93%;
+}
 
 </style>
 
@@ -61,9 +146,11 @@ $(function(){
 	$.fn.colorbox.settings.opacity=0.5;	
 	$.fn.colorbox.settings.overlayClose=false;	
 	
-//	$(".s5box_Login").colorbox({width:"300px", height:"250px", inline:true, href:"form#LogScr", title:"Please Login",
-//									onComplete:function(){$("form input:first").focus();}});
-	$(".s5box_Login").colorbox({width:"300px", height:"250px", href:"Test6.html", title:"Please Login", iframe:true, fastIframe:false,
+	$(".s5box_Login").colorbox({width:"30%", inline:true, href:"#LoginBox", title:"Please Login",
+									onComplete:function(){$("form input:first").focus();}});
+	
+/* 	$(".s5box_Login").colorbox({width:"50%",  href:"Test6.html", 
+			inline:true, title:"Please Login", iframe:true, fastIframe:false,
 		onComplete:function(){
 				$("iframe").contents().find("input:first").focus();
 				},
@@ -72,7 +159,14 @@ $(function(){
 				$("#LoginName").text(unm);
 				}
 									});
-	
+ */	
+ 
+ 	$("#askaquestion").click(function(){
+ 		$.facebox({
+ 			iframe:'Test8.html',rev:'iframe|550|550'
+ 		});
+ 		return false;
+ 	})
 });
 
 </script>
@@ -82,17 +176,37 @@ $(function(){
 <br />
 <div id="LoginName"></div>
 <br />
+<div id="askaquestion" class="askquestion">Ask a question</div>
+<br />
 <div Style="visibility: hidden;">
+<div id="LoginBox">
+<div class="module_out_box">
+<div class="module_round_box">
 <form id="LogScr">
-<div>
+<fieldset class="userdata">
+<p>
 <span class="fldnme">User ID : </span>
-<input type="text" name="uid" style="width:100px;">
-</div><br />
-<div>
+<input type="text" name="uid" class="inputfld">
+</p>
+<p>
 <span class="fldnme">Password : </span>
-<input type="password" name="pwd" style="width:100px;">
-</div><br />
+<input type="password" name="pwd" class="inputfld">
+</p>
+<p>
+<label class="fldnme">remember me</label>
+<input type="checkbox" value="yes" name="remember">
+</p>
+<input class="button" type="submit" value="Submit">
+</fieldset>
+<ul>
+<li><a href="#">forget password</a></li>
+<li><a href="#">forget username</a></li>
+<li><a href="#">registration</a></li>
+</ul>
 </form>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

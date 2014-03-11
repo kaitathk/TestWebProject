@@ -9,6 +9,13 @@
 
  
 <style type="text/css">
+
+.module_round_box{
+	box_shadow:0 0 8px #BDBDBD;
+	border:1px solid #c5c5c5;
+	border-radius:6px;
+	padding:20px 20px 16px;
+}
 .fldnme{
 	display:inline-block;
 	min-width:6em;
@@ -27,11 +34,16 @@ input {
 
 .button {
 	height:28px;
+	border:medium none;
+}
+input:hover{
+	  border:solid 1px #BDBCBC;
 }	
 
 </style>
 </head>
 <body>
+<div class="module_round_box">
 <form id="LogScr" onsubmit="returnform()">
 <div>
 <span class="fldnme">User ID : </span>
@@ -46,6 +58,7 @@ input {
 </div>
 <div id="unm" class="divhidden"></div>
 </form>
+</div>
 
 
 <script type="text/javascript">

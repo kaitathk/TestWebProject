@@ -13,24 +13,26 @@
 <link rel="stylesheet" style="text/css" charset="utf-8" href="css/vmsite-ltr.css" />
 <link rel="stylesheet" style="text/css" charset="utf-8" href="css/template.css" />
 <link rel="stylesheet" style="text/css" charset="utf-8" href="css/validationEngine.jquery.css" />
+<link rel="stylesheet" style="text/css" charset="utf-8" href="css/validationEngine.template.css" />
 
 <style type="text/css">
 .inputbox, .registration input, .login input, .contact-form input, #jform_contact_message, input,
 .product-details, .ask-a-question, .nivoSlider, textarea
 {
-	position:relative;
-	z-index:0;
+ 	position:relative;
+ 	z-index:0;
 	behavior: url(css/PIE.htc);
 }
 </style>
 
-<script type="text/javascript" language="javascript" charset="utf-8" src="js/validate.js"></script>
+<!-- <script type="text/javascript" language="javascript" charset="utf-8" src="js/validate.js"></script> -->
 <script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery.validationEngine.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery.validationEngine-en.js"></script>
 
 <script type="text/javascript">
 
 $(function(){
-	$("#asform").validataionEngine("attach");
+	$("#askform").validationEngine("attach");
 });
 
 </script>
@@ -44,18 +46,22 @@ $(function(){
 		<form class="form-validate" name="askform" id="askform">
 		
 		<label>Name : 
-			<input type="text" id="name" size=30
+			<input type="text" id="name" size=30 
 				class="validate[required,minSize[4],maxSize[64]]" 
-				validation="required name" name="name" value=""/>
+				validation="required name" name="name" value="" >
 		</label>
 		<br />
 		<label>E-Mail : 
-			<input type="text" id="email" size=30 validation="required email"/>
+			<input type="text" id="email" size=30 
+				class="validate[required,custom[email]]" 
+				validation="required email" name="email" value="" >
 		</label>
 		<br />
 		<label>Pls Comment
 		<br />
-		<textarea title="Pls Comment" id="comment" class="field" name="comment" rows="10" >
+		<textarea title="Pls Comment" id="comment" 
+				class="validate[required,minSize[50],maxSize[2000]] field" 
+				name="comment" rows="10" >
 		</textarea>
 		</label>
 		<div class="submit">

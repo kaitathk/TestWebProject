@@ -16,6 +16,11 @@
 <link rel="stylesheet" style="text/css" charset="utf-8" href="css/validationEngine.template.css" />
 
 <style type="text/css">
+
+*{
+	font-family:Arial;
+	font-size:12px;
+}
 .inputbox, .registration input, .login input, .contact-form input, #jform_contact_message, input,
 .product-details, .ask-a-question, .nivoSlider, textarea
 {
@@ -47,8 +52,9 @@ $(function(){
 		
 		<label>Name : 
 			<input type="text" id="name" size=30 
-				class="validate[required,minSize[4],maxSize[64]]" 
-				validation="required name" name="name" value="" >
+				class="validate[required,minSize[4],maxSize[64]]"
+				validation="required name" name="name" value=""
+				 >
 		</label>
 		<br />
 		<label>E-Mail : 

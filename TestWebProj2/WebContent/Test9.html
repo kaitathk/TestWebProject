@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=BIG5">
+<title>Test9</title>
+
+<style type="text/css">
+
+* {
+	margin:0;
+	padding:0;
+	font-family:Arial;
+	font-size:12px;
+}
+
+.vmCartPaymentlogo img{
+	max-width:80px;
+}
+
+.vmpayment{
+}
+
+
+ .vmCartPaymentlogo img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.paydiv{
+	width:80px;
+	padding-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+}	
+
+fieldset label{
+	display:inline-block;
+	width:100px;
+/* 	border:1px solid;	 */
+}
+
+#paytitle{
+	display:table-cell;
+	text-align:center;
+	height:36px;
+	vertical-align:middle;
+	padding:0px 5px;
+}
+
+/* #paytitle p{
+	margin-left:auto;
+	margin-right:auto;
+}
+ */
+#couter{
+	display:inline-block;
+	position:relative;
+	left:50%;
+}
+#cinner{
+	position:relative;
+	left:-50%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div style="border:1px solid;">
+<div id="couter">
+<div id="cinner">
+<div id="paytitle"><p>Payment Method</p></div>
+</div>
+</div>
+</div>
+
+<fieldset>
+
+<label for="pay1">
+<span class="vmpayment">
+	<span class="vmCartPaymentlogo">
+		<img src="images/Cash-payment.png" align="middle" style="opacity:1;">
+	</span>
+<!-- <div class="vpaymentname">Cash</div>  -->
+<div class="paydiv">
+<input id="pay1" type="radio" value="2" name="virtuemart_paymentmethod_id">
+<span class="vmpaymentname">Cash</span>
+</div>
+</span>
+</label>
+
+<label for="pay2">
+<span class="vmpayment">
+	<span class="vmCartPaymentlogo">
+		<img src="images/Paypal-Straight.png" align="middle" style="opacity:1;">
+	</span>
+<!-- 	<div class="vpaymentname">PayPal</div> -->
+<div class="paydiv">
+<input id="pay2" type="radio" value="1" name="virtuemart_paymentmethod_id">
+<span class="vmpaymentname">PayPal</span>
+</div> 	
+</span>
+</label>
+
+</fieldset>
+	
+</body>
+</html>

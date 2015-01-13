@@ -17,7 +17,8 @@
 	max-width:80px;
 }
 
-.vmpayment{
+.vmpayment:hover{
+	cursor:pointer;
 }
 
 
@@ -43,7 +44,7 @@ fieldset label{
 #paytitle{
 	display:table-cell;
 	text-align:center;
-	height:36px;
+	height:48px;
 	vertical-align:middle;
 	padding:0px 5px;
 }
@@ -53,15 +54,48 @@ fieldset label{
 	margin-right:auto;
 }
  */
-#couter{
+.couter{
 	display:inline-block;
 	position:relative;
 	left:50%;
 }
-#cinner{
+.cinner{
 	position:relative;
 	left:-50%;
 }
+
+#shipsel, #paysel{
+	width:150px;
+	height:80px;
+	border:1px solid #e9e9e9;
+	margin-top:8px;
+}
+
+.selected{
+	height:75%;
+	background:url("./images/black-30.png")
+		repeat scroll center center;
+	display:inline-cell;
+	vertical-align:middle;
+}
+
+#shipsel a, #paysel a{
+	vertical-align:middle;
+	width:150px;
+	height:20px;
+	display:table-cell;
+	text-declaration:none;
+}
+
+#shipsel a:hover, #paysel a:hover{
+	cursor:pointer;
+	background:url("./images/black-04.png")
+}
+
+.clear, br.clear{
+	clear:both;
+}
+
 
 </style>
 
@@ -70,8 +104,8 @@ fieldset label{
 <body>
 
 <div style="border:1px solid;">
-<div id="couter">
-<div id="cinner">
+<div class="couter">
+<div class="cinner">
 <div id="paytitle"><p>Payment Method</p></div>
 </div>
 </div>
@@ -106,6 +140,44 @@ fieldset label{
 </label>
 
 </fieldset>
-	
+<br />	
+
+<div id="shipsel">
+<div class="selected">
+<div class="couter">
+<div class="cinner">
+<div><img width="48" height="36" src="./images/Paypal-Straight.png"/><div>self take</div></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<a href="#">
+<div class="couter">
+<div class="cinner">
+Select Shippment
+</div>
+</div>
+</a>
+</div>
+
+<div id="paysel">
+<div class="selected">
+<div class="couter">
+<div class="cinner">
+<div>Cash</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<a href="#">
+<div class="couter">
+<div class="cinner">
+Select Payment
+</div>
+</div>
+</a>
+</div>
+
+
 </body>
 </html>

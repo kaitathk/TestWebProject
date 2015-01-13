@@ -5,7 +5,7 @@
 <title>Test6</title>
 
  
-<script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" language="javascript" charset="utf-8" src="./js/jquery-1.8.2.js"></script>
 
  
 <style type="text/css">
@@ -40,9 +40,33 @@ input:hover{
 	  border:solid 1px #BDBCBC;
 }	
 
+.cls1, .cls2{
+	height:24px;
+	width:70px;
+	border:solid 1px #b0b0b0;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;	
+	behavior: url(./css/PIE.htc);
+	text-align:center;
+	vertical-align:middle;
+	line-height:24px;
+}
+
 </style>
 </head>
 <body>
+
+<script type="text/javascript">
+$(function(){
+	$(".but1").click(
+			function(){
+				$("#LogScr").find(".cls1").html("change"+"<br /><br />");
+			});
+});
+</script>
+
 <div class="module_round_box">
 <form id="LogScr" onsubmit="returnform()">
 <div>
@@ -57,9 +81,13 @@ input:hover{
 <input class="button" type="submit" value="Submit">
 </div>
 <div id="unm" class="divhidden"></div>
+<br />
+<div class="cls1">class1<br /><br /></div>
+<div class="cls2">class2</div>
 </form>
 </div>
-
+<br />
+<button class="but1">Press</button>
 
 <script type="text/javascript">
 function returnform(){
